@@ -1,5 +1,7 @@
 # Workshop-1.0
 
+
+
 LED BLINK:
 void setup() {
   pinMode(A0, OUTPUT);   
@@ -23,6 +25,54 @@ void loop() {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Push Button Timer LED:
+#define LED 5
+#define BTN 8
+
+void setup() {
+  pinMode(LED, OUTPUT);
+  pinMode(BTN, INPUT_PULLUP);
+}
+
+void loop() {
+  if(digitalRead(BTN) == LOW) {
+    digitalWrite(LED, HIGH);
+    delay(1000);
+    digitalWrite(LED, LOW);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Servo Motor:
 #include <Servo.h>
 Servo x;
@@ -41,6 +91,19 @@ void setup() {
 void loop() {
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 PWM Motor Control:
 int a = 2;
@@ -72,6 +135,10 @@ void setup() {
   pinMode(pwm, OUTPUT);
 }
 
+
+
+
+
 void loop() {
   // Motor clockwise
   digitalWrite(a, LOW);
@@ -86,6 +153,20 @@ void loop() {
   delay(1000);             // 1 second
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Sensor:
 int sensorPin = A0;
 int sensorValue = 0;
@@ -93,6 +174,8 @@ int sensorValue = 0;
 void setup() {
   Serial.begin(9600); 
 }
+
+
 
 void loop() {
   sensorValue = analogRead(sensorPin);
@@ -105,6 +188,8 @@ void loop() {
 
   int sensorPin = 2;  
 int sensorState = 0;
+
+
 
 void setup() {
   pinMode(sensorPin, INPUT); 
@@ -123,6 +208,19 @@ void loop() {
   delay(100);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 Photoresistor:
 void setup() {
   Serial.begin(9600);
@@ -136,6 +234,9 @@ void loop() {
   delay(100);
 }
 
+
+
+
 void setup() {
   Serial.begin(9600);
 }
@@ -145,6 +246,8 @@ void loop() {
   delay(100);
 }
 
+
+   
 void setup() {
   Serial.begin(9600);
   pinMode(5, OUTPUT);
@@ -167,6 +270,18 @@ void loop() {
   delay(100);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 Gas Sensor:
 int GAS_SENSOR = A0;  
 
@@ -187,6 +302,21 @@ void loop() {
   
   delay(1000);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 int GAS_SENSOR = A0;  
 int ALARM = 12;
@@ -226,6 +356,23 @@ void loop() {
   delay(1000);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Obstacle Detection:
 
 int LED=13;
@@ -252,6 +399,19 @@ void loop()
   }
   delay(1000);
 }
+
+
+
+
+
+
+
+
+
+ 
+
+
+
 
 Ultrasonic Distance Sensor:
 
